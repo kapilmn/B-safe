@@ -6,7 +6,7 @@ pipeline {
     stages{
         stage('GIT checkout') {
             steps {
-                git credentialsId: 'github_cred', url: 'https://github.com/tmatin100/CalTech-PG-DevOps-Final-Capstone-Project.git'
+                git credentialsId: 'github_cred', url: 'https://github.com/kapilmn/B-safe.git'
            }
        }
           stage('Build Package') {
@@ -27,7 +27,7 @@ pipeline {
                   sh 'docker login -u kapilmanikantann -p ${dockerhubcred}'
                   sh 'docker push kapilmanikantann/${JOB_NAME}:v1.${BUILD_NUMBER}'
                   sh 'docker push kapilmanikantann/${JOB_NAME}:latest'
-                  sh 'docker rmi ${JOB_NAME}:v1.${BUILD_NUMBER} kapilmanikantann/${JOB_NAME}:v1.${BUILD_NUMBER} tmatin100/${JOB_NAME}:latest'
+                  sh 'docker rmi ${JOB_NAME}:v1.${BUILD_NUMBER} kapilmanikantann/${JOB_NAME}:v1.${BUILD_NUMBER} kapilmanikantann/${JOB_NAME}:latest'
                 }      
             }
         }
