@@ -3,14 +3,5 @@
   become: true
   
   tasks:
-     - name: stop tomcat docker
-       shell: docker stop tomcat-container
-       
-     - name: remove tomcat container
-       shell: docker rm -f tomcat-container
-       
-     - name: Remove tomcat image
-       shell: docker rmi -f kapilmanikantann/hello-world
-       
      - name: create a new tomcat container using the defined Dockerfile
        shell: docker run -d --name tomcat-container -p 8080:8080 kapilmanikantann/bsafe
