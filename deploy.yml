@@ -4,4 +4,4 @@
   
   tasks:
      - name: create a new tomcat container using the defined Dockerfile
-       shell: docker run -d --name tomcat-container -p 8080:8080 kapilmanikantann/bsafe
+       shell: docker run -d --name tomcat-container -p 8080:8080 kapilmanikantann/b-safe
