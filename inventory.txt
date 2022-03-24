@@ -1,2 +1,2 @@
 [ans-host]
-44.202.99.27 ansible_port=22 ansible_ssh_private_key_file=/etc/ansible/aws.pem
+44.202.99.27 ansible_port=22
